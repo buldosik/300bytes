@@ -1,0 +1,98 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    
+    
+<Button>:
+    font_size:40
+    color:0.3, 0.6, 0.7, 1
+    size_hint: 0.5, 1
+    #!all buttons will have this settings
+<FloatLayout>:
+    size_hint:0.1,0.1
+    Button:
+        id: btn1
+        pos_hint: {"x":0.5, "top":1} #{"x":, "y", "top","bottom", "left", "right"}
+        text:'PLACE!' if btn1.state == "normal" else "placed"
+
+    Button:
+        id: btn2
+        pos_hint: {"y":0}
+        text:'YES?' if btn2.state == "normal" else "NO!"
+        background_color: 0.3, 0.4, 0.5, 1
+
+
+
+# <MainWindow>:
+#     name: "main"
+
+#     GridLayout:
+#         cols:1
+
+#         GridLayout:
+#             cols: 2
+
+#             Label:
+#                 text:"Password: "
+
+#             TextInput:
+#                 id: passw
+#                 multiline: False
+            
+#         Button:
+#             text:"Submit"
+#             on_release:
+#                 app.root.current = "second" if passw.text == "1337" else "main"
+#                 root.manager.transition.direction = "left"
+
+# <SecondWindow>:
+#     name: "second"
+
+#     Button:
+#         text:"Go back"
+#         on_release:
+#             app.root.current = "main"
+#             root.manager.transition.direction = "right"
+
+
+# <Touch>:
+#     btn:btn
+
+#     Button:
+#         id:btn
+#         text:'My btn'
+
+
+
+
+# <MyGrid>
+
+#     name: name
+#     email: email
+
+#     GridLayout:
+#         cols:1
+#         size: root.width -100, root.height-100
+#         pos: 100, 100
+
+#         GridLayout:
+#             cols:2
+            
+#             Label:
+#                 text:"Name: "
+
+#             TextInput:
+#                 id:name
+#                 multiline:False
+
+#             Label:
+#                 text:"Email: "
+
+#             TextInput:
+#                 id:email
+#                 multiline:False
+
+#         Button:
+#             text:'Submit'
+#             on_press:root.btn()
+            
